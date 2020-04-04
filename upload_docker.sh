@@ -3,13 +3,12 @@
 
 # Assumes that an image is built via `run_docker.sh`
 
-# Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=maweeks/nano-devops-04
 
-# Step 2:  
-# Authenticate & tag
+# Authenticate
 echo "Docker ID and Image: $dockerpath"
+docker login --username=maweeks --password=password123
 
-# Step 3:
 # Push image to a docker repository
+docker push maweeks/nano-devops-04:latest
